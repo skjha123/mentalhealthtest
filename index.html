@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mental Health Assessment</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="mental_health.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="mental.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="health.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  <section id="title">
+    <script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+    <!-- Nav Bar -->
+    <nav class="navbar bg-dark navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="">Mental Health Assessment</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Download</a>
+            </li>
+        </ul>
+     </div>
+    </nav>
+
+
+
+    <!-- Title -->
+
+    <div>
+      <h1>TEST YOU DEPRESSION</h1>
+
+      <main role="main" id="main">
+  			<div class="content selftest">
+
+  	<div class="test" data-submit-link="https://depression.org.nz/is-it-depression-anxiety/self-test/depression-test/submit" data-test-name="PHQ" data-results-page="https://depression.org.nz/is-it-depression-anxiety/self-test/depression-test/result">
+  		<h1 class="test__title">Depression test</h1>
+  		<section class="test__inner">
+
+  			<div class="slider">
+  			<form method="post" action="" id="test__form-slider" class="test__form" autocomplete="off" >
+
+  				<div class="test__holder">
+
+
+
+  						<fieldset class="test__list show" aria-hidden="false" >
+
+
+
+  								<a class="test-block__sign-language__icon" href="/is-it-depression-anxiety/self-test/depression-test/#video-1" data-question="1" data-sharer-name="NZSL" title="View sign language video">
+  									<i class="icon icon--hands" title="View sign language video"></i>
+  								</a>
+
+
+
+  							<div class="test__question">
+  								<h2>
+  									<span class="number">1.</span>
+  									How often have you been bothered by feeling down, depressed, irritable, or hopeless over the last two weeks?
+  								</h2>
+  							</div>
+
+
+  							<ul class="test__answer clearfix">
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="NOT AT ALL" value="0" name="questions[1]" data-question="1" class="radio" id="answer1-1"  >
+  										<label for="answer1-1" aria-labelledby="NOT AT ALL" data-enter-click="1" tabindex="0">NOT AT ALL</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="SEVERAL DAYS" value="1" name="questions[1]" data-question="1" class="radio" id="answer2-1"  >
+  										<label for="answer2-1" aria-labelledby="SEVERAL DAYS" data-enter-click="1" tabindex="0">SEVERAL DAYS</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="MORE THAN HALF THE DAYS" value="2" name="questions[1]" data-question="1" class="radio" id="answer3-1"  >
+  										<label for="answer3-1" aria-labelledby="MORE THAN HALF THE DAYS" data-enter-click="1" tabindex="0">MORE THAN HALF THE DAYS</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="NEARLY EVERY DAY" value="3" name="questions[1]" data-question="1" class="radio" id="answer4-1"  >
+  										<label for="answer4-1" aria-labelledby="NEARLY EVERY DAY" data-enter-click="1" tabindex="0">NEARLY EVERY DAY</label>
+  									</li>
+
+  							</ul>
+  						</fieldset>
+
+
+
+  						<fieldset class="test__list hide" aria-hidden="true" >
+
+
+
+  								<a class="test-block__sign-language__icon" href="/is-it-depression-anxiety/self-test/depression-test/#video-2" data-question="2" data-sharer-name="NZSL" title="View sign language video">
+  									<i class="icon icon--hands" title="View sign language video"></i>
+  								</a>
+
+
+
+  							<div class="test__question">
+  								<h2>
+  									<span class="number">2.</span>
+  									How often have you been bothered that you have little interest or pleasure in doing things over the last two weeks?
+  								</h2>
+  							</div>
+
+
+  							<ul class="test__answer clearfix">
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="NOT AT ALL" value="0" name="questions[2]" data-question="2" class="radio" id="answer1-2"  >
+  										<label for="answer1-2" aria-labelledby="NOT AT ALL" data-enter-click="1" tabindex="-1">NOT AT ALL</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="SEVERAL DAYS" value="1" name="questions[2]" data-question="2" class="radio" id="answer2-2"  >
+  										<label for="answer2-2" aria-labelledby="SEVERAL DAYS" data-enter-click="1" tabindex="-1">SEVERAL DAYS</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="MORE THAN HALF THE DAYS" value="2" name="questions[2]" data-question="2" class="radio" id="answer3-2"  >
+  										<label for="answer3-2" aria-labelledby="MORE THAN HALF THE DAYS" data-enter-click="1" tabindex="-1">MORE THAN HALF THE DAYS</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="NEARLY EVERY DAY" value="3" name="questions[2]" data-question="2" class="radio" id="answer4-2"  >
+  										<label for="answer4-2" aria-labelledby="NEARLY EVERY DAY" data-enter-click="1" tabindex="-1">NEARLY EVERY DAY</label>
+  									</li>
+
+  							</ul>
+  						</fieldset>
+
+
+
+  						<fieldset class="test__list hide" aria-hidden="true" >
+
+
+
+  								<a class="test-block__sign-language__icon" href="/is-it-depression-anxiety/self-test/depression-test/#video-3" data-question="3" data-sharer-name="NZSL" title="View sign language video">
+  									<i class="icon icon--hands" title="View sign language video"></i>
+  								</a>
+
+
+
+  							<div class="test__question">
+  								<h2>
+  									<span class="number">3.</span>
+  									How often have you been bothered by trouble falling asleep, staying asleep, or sleeping too much over the last two weeks?
+  								</h2>
+  							</div>
+
+
+  							<ul class="test__answer clearfix">
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="NOT AT ALL" value="0" name="questions[3]" data-question="3" class="radio" id="answer1-3"  >
+  										<label for="answer1-3" aria-labelledby="NOT AT ALL" data-enter-click="1" tabindex="-1">NOT AT ALL</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="SEVERAL DAYS" value="1" name="questions[3]" data-question="3" class="radio" id="answer2-3"  >
+  										<label for="answer2-3" aria-labelledby="SEVERAL DAYS" data-enter-click="1" tabindex="-1">SEVERAL DAYS</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="MORE THAN HALF THE DAYS" value="2" name="questions[3]" data-question="3" class="radio" id="answer3-3"  >
+  										<label for="answer3-3" aria-labelledby="MORE THAN HALF THE DAYS" data-enter-click="1" tabindex="-1">MORE THAN HALF THE DAYS</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="NEARLY EVERY DAY" value="3" name="questions[3]" data-question="3" class="radio" id="answer4-3"  >
+  										<label for="answer4-3" aria-labelledby="NEARLY EVERY DAY" data-enter-click="1" tabindex="-1">NEARLY EVERY DAY</label>
+  									</li>
+
+  							</ul>
+  						</fieldset>
+
+
+
+  						<fieldset class="test__list hide" aria-hidden="true" >
+
+
+
+  								<a class="test-block__sign-language__icon" href="/is-it-depression-anxiety/self-test/depression-test/#video-4" data-question="4" data-sharer-name="NZSL" title="View sign language video">
+  									<i class="icon icon--hands" title="View sign language video"></i>
+  								</a>
+
+
+
+  							<div class="test__question">
+  								<h2>
+  									<span class="number">4.</span>
+  									How often have you been bothered that you have poor appetite, weight loss, or overeating over the last two weeks?
+  								</h2>
+  							</div>
+
+
+  							<ul class="test__answer clearfix">
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="NOT AT ALL" value="0" name="questions[4]" data-question="4" class="radio" id="answer1-4"  >
+  										<label for="answer1-4" aria-labelledby="NOT AT ALL" data-enter-click="1" tabindex="-1">NOT AT ALL</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="SEVERAL DAYS" value="1" name="questions[4]" data-question="4" class="radio" id="answer2-4"  >
+  										<label for="answer2-4" aria-labelledby="SEVERAL DAYS" data-enter-click="1" tabindex="-1">SEVERAL DAYS</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="MORE THAN HALF THE DAYS" value="2" name="questions[4]" data-question="4" class="radio" id="answer3-4"  >
+  										<label for="answer3-4" aria-labelledby="MORE THAN HALF THE DAYS" data-enter-click="1" tabindex="-1">MORE THAN HALF THE DAYS</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="NEARLY EVERY DAY" value="3" name="questions[4]" data-question="4" class="radio" id="answer4-4"  >
+  										<label for="answer4-4" aria-labelledby="NEARLY EVERY DAY" data-enter-click="1" tabindex="-1">NEARLY EVERY DAY</label>
+  									</li>
+
+  							</ul>
+  						</fieldset>
+
+
+
+  						<fieldset class="test__list hide" aria-hidden="true" >
+
+
+
+  								<a class="test-block__sign-language__icon" href="/is-it-depression-anxiety/self-test/depression-test/#video-5" data-question="5" data-sharer-name="NZSL" title="View sign language video">
+  									<i class="icon icon--hands" title="View sign language video"></i>
+  								</a>
+
+
+
+  							<div class="test__question">
+  								<h2>
+  									<span class="number">5.</span>
+  									How often have you been bothered by feeling tired, or having little energy over the last two weeks?
+  								</h2>
+  							</div>
+
+
+  							<ul class="test__answer clearfix">
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="NOT AT ALL" value="0" name="questions[5]" data-question="5" class="radio" id="answer1-5"  >
+  										<label for="answer1-5" aria-labelledby="NOT AT ALL" data-enter-click="1" tabindex="-1">NOT AT ALL</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="SEVERAL DAYS" value="1" name="questions[5]" data-question="5" class="radio" id="answer2-5"  >
+  										<label for="answer2-5" aria-labelledby="SEVERAL DAYS" data-enter-click="1" tabindex="-1">SEVERAL DAYS</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="MORE THAN HALF THE DAYS" value="2" name="questions[5]" data-question="5" class="radio" id="answer3-5"  >
+  										<label for="answer3-5" aria-labelledby="MORE THAN HALF THE DAYS" data-enter-click="1" tabindex="-1">MORE THAN HALF THE DAYS</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="NEARLY EVERY DAY" value="3" name="questions[5]" data-question="5" class="radio" id="answer4-5"  >
+  										<label for="answer4-5" aria-labelledby="NEARLY EVERY DAY" data-enter-click="1" tabindex="-1">NEARLY EVERY DAY</label>
+  									</li>
+
+  							</ul>
+  						</fieldset>
+
+
+
+  						<fieldset class="test__list hide" aria-hidden="true" >
+
+
+
+  								<a class="test-block__sign-language__icon" href="/is-it-depression-anxiety/self-test/depression-test/#video-6" data-question="6" data-sharer-name="NZSL" title="View sign language video">
+  									<i class="icon icon--hands" title="View sign language video"></i>
+  								</a>
+
+
+
+  							<div class="test__question">
+  								<h2>
+  									<span class="number">6.</span>
+  									How often have you been bothered by feeling bad about yourself – or feeling that you are a failure, or that you have let yourself or your family down over the last two weeks?
+  								</h2>
+  							</div>
+
+
+  							<ul class="test__answer clearfix">
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="NOT AT ALL" value="0" name="questions[6]" data-question="6" class="radio" id="answer1-6"  >
+  										<label for="answer1-6" aria-labelledby="NOT AT ALL" data-enter-click="1" tabindex="-1">NOT AT ALL</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="SEVERAL DAYS" value="1" name="questions[6]" data-question="6" class="radio" id="answer2-6"  >
+  										<label for="answer2-6" aria-labelledby="SEVERAL DAYS" data-enter-click="1" tabindex="-1">SEVERAL DAYS</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="MORE THAN HALF THE DAYS" value="2" name="questions[6]" data-question="6" class="radio" id="answer3-6"  >
+  										<label for="answer3-6" aria-labelledby="MORE THAN HALF THE DAYS" data-enter-click="1" tabindex="-1">MORE THAN HALF THE DAYS</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="NEARLY EVERY DAY" value="3" name="questions[6]" data-question="6" class="radio" id="answer4-6"  >
+  										<label for="answer4-6" aria-labelledby="NEARLY EVERY DAY" data-enter-click="1" tabindex="-1">NEARLY EVERY DAY</label>
+  									</li>
+
+  							</ul>
+  						</fieldset>
+
+
+
+  						<fieldset class="test__list hide" aria-hidden="true" >
+
+
+
+  								<a class="test-block__sign-language__icon" href="/is-it-depression-anxiety/self-test/depression-test/#video-7" data-question="7" data-sharer-name="NZSL" title="View sign language video">
+  									<i class="icon icon--hands" title="View sign language video"></i>
+  								</a>
+
+
+
+  							<div class="test__question">
+  								<h2>
+  									<span class="number">7.</span>
+  									How often have you been bothered that you have trouble concentrating on things like school work, reading, or watching TV over the last two weeks?
+  								</h2>
+  							</div>
+
+
+  							<ul class="test__answer clearfix">
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="NOT AT ALL" value="0" name="questions[7]" data-question="7" class="radio" id="answer1-7"  >
+  										<label for="answer1-7" aria-labelledby="NOT AT ALL" data-enter-click="1" tabindex="-1">NOT AT ALL</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="SEVERAL DAYS" value="1" name="questions[7]" data-question="7" class="radio" id="answer2-7"  >
+  										<label for="answer2-7" aria-labelledby="SEVERAL DAYS" data-enter-click="1" tabindex="-1">SEVERAL DAYS</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="MORE THAN HALF THE DAYS" value="2" name="questions[7]" data-question="7" class="radio" id="answer3-7"  >
+  										<label for="answer3-7" aria-labelledby="MORE THAN HALF THE DAYS" data-enter-click="1" tabindex="-1">MORE THAN HALF THE DAYS</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="NEARLY EVERY DAY" value="3" name="questions[7]" data-question="7" class="radio" id="answer4-7"  >
+  										<label for="answer4-7" aria-labelledby="NEARLY EVERY DAY" data-enter-click="1" tabindex="-1">NEARLY EVERY DAY</label>
+  									</li>
+
+  							</ul>
+  						</fieldset>
+
+
+
+  						<fieldset class="test__list hide" aria-hidden="true" >
+
+
+
+  								<a class="test-block__sign-language__icon" href="/is-it-depression-anxiety/self-test/depression-test/#video-8" data-question="8" data-sharer-name="NZSL" title="View sign language video">
+  									<i class="icon icon--hands" title="View sign language video"></i>
+  								</a>
+
+
+
+  							<div class="test__question">
+  								<h2>
+  									<span class="number">8.</span>
+  									How often have you been bothered by moving or speaking so slowly that other people could have noticed? Or the opposite – being so fidgety or restless that you were moving around a lot more than usual over the last two weeks?
+  								</h2>
+  							</div>
+
+
+  							<ul class="test__answer clearfix">
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="NOT AT ALL" value="0" name="questions[8]" data-question="8" class="radio" id="answer1-8"  >
+  										<label for="answer1-8" aria-labelledby="NOT AT ALL" data-enter-click="1" tabindex="-1">NOT AT ALL</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="SEVERAL DAYS" value="1" name="questions[8]" data-question="8" class="radio" id="answer2-8"  >
+  										<label for="answer2-8" aria-labelledby="SEVERAL DAYS" data-enter-click="1" tabindex="-1">SEVERAL DAYS</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="MORE THAN HALF THE DAYS" value="2" name="questions[8]" data-question="8" class="radio" id="answer3-8"  >
+  										<label for="answer3-8" aria-labelledby="MORE THAN HALF THE DAYS" data-enter-click="1" tabindex="-1">MORE THAN HALF THE DAYS</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="NEARLY EVERY DAY" value="3" name="questions[8]" data-question="8" class="radio" id="answer4-8"  >
+  										<label for="answer4-8" aria-labelledby="NEARLY EVERY DAY" data-enter-click="1" tabindex="-1">NEARLY EVERY DAY</label>
+  									</li>
+
+  							</ul>
+  						</fieldset>
+
+
+
+  						<fieldset class="test__list hide" aria-hidden="true" >
+
+
+
+  								<a class="test-block__sign-language__icon" href="/is-it-depression-anxiety/self-test/depression-test/#video-9" data-question="9" data-sharer-name="NZSL" title="View sign language video">
+  									<i class="icon icon--hands" title="View sign language video"></i>
+  								</a>
+
+
+
+  							<div class="test__question">
+  								<h2>
+  									<span class="number">9.</span>
+  									How often have you been bothered by thoughts that you would be better off dead, or of hurting yourself in some way over the last two weeks?
+  								</h2>
+  							</div>
+
+
+  							<ul class="test__answer clearfix">
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="NOT AT ALL" value="0" name="questions[9]" data-question="9" class="radio" id="answer1-9"  >
+  										<label for="answer1-9" aria-labelledby="NOT AT ALL" data-enter-click="1" tabindex="-1">NOT AT ALL</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="SEVERAL DAYS" value="1" name="questions[9]" data-question="9" class="radio" id="answer2-9"  data-priority-id="7"  >
+  										<label for="answer2-9" aria-labelledby="SEVERAL DAYS" data-enter-click="1" tabindex="-1">SEVERAL DAYS</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="MORE THAN HALF THE DAYS" value="2" name="questions[9]" data-question="9" class="radio" id="answer3-9"  data-priority-id="14"  >
+  										<label for="answer3-9" aria-labelledby="MORE THAN HALF THE DAYS" data-enter-click="1" tabindex="-1">MORE THAN HALF THE DAYS</label>
+  									</li>
+
+  									<li role="radio" aria-checked="undefined" >
+  										<input type="radio" aria-labelledby="NEARLY EVERY DAY" value="3" name="questions[9]" data-question="9" class="radio" id="answer4-9"  data-priority-id="16"  >
+  										<label for="answer4-9" aria-labelledby="NEARLY EVERY DAY" data-enter-click="1" tabindex="-1">NEARLY EVERY DAY</label>
+  									</li>
+
+  							</ul>
+  						</fieldset>
+
+
+
+  				</div>
+
+  			</form>
+  			</div>
+
+
+
+
+
+  		</section>
+
+  	</div>
+
+
+
+
+        <hr></hr>
+  				<h3>This support is only available for people in INDIA.</h3>
+  			</div>
+  </section>
+
+
+  <!-- Features -->
+
+  <section id="features">
+
+
+    <p></p>
+
+
+
+
+
+  <footer id="footer">
+
+    <p>© Copyright 2020 Mental Health Assessment</p>
+
+  </footer>
+
+
+</body>
+
+</html>
